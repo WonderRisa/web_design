@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!--
+		I360 Web Design: Project 4 Complete
+		https://fontawesome.com/get-started
+		https://fonts.google.com/
+		https://www.w3schools.com/howto/howto_js_off-canvas.asp
+		http://leafletjs.com/examples/quick-start/
+		https://www.latlong.net/
+		http://www.material-ui.com/#/customization/colors
+		https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient
+		https://css-tricks.com/stripes-css/
+		Access Token:
+		pk.eyJ1IjoiaTM2MCIsImEiOiJjamZuYjYwaG4wbDRuMnFtZHNhYWhpbzc0In0.yMHIZKQj5MtG1fJBMAlXbA
+	-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>I360 Project 4 Starter</title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/normalize.css">
+
+		<!-- Leaflet: OK to use either downloaded resources or CDN -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin=""/>
+
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!-- IU Fonts -->
+		<link href="https://fonts.iu.edu/style.css?family=BentonSans:regular,bold|BentonSansCond:regular|GeorgiaPro:regular" media="screen" rel="stylesheet" type="text/css"/>
+
+		<!-- Font Awesome - For use in I360 -->
+		<script src="https://kit.fontawesome.com/3680edfbdb.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<!-- OPTIONAL VISUAL INDICATOR FOR BREAK POINTS -->
+		<div id="tag"></div>
+
+		<!-- NAVIGATION -->
+		<nav id="mySidenav" class="sidenav">
+			<a class="closebtn">&times;</a>
+			<a href="#">About</a>
+			<a href="#">Admissions</a>
+			<a href="#">Academics</a>
+			<a href="#">Contact</a>
+		</nav>
+		
+		<!-- Use any element to open the sidenav -->
+		<div class="openbtn">
+			<i class="fas fa-bars fa-2x"></i>
+			<span class="menu-text">menu</span>
+		</div>
+
+		<!-- MAIN CONTENT -->
+		<div class="all-over-bkg"></div>
+		<header>
+			<h1>Luddy School of <br><span>Informatics, Computing and Engineering</span></h1>
+		</header>
+		<!-- Place map here -->
+		<div id="mapid"></div>
+		<div class="racing-stripes"></div>
+		
+		<article>
+			<h2>The school of tomorrow</h2>
+			<p>The Indiana University Luddy School of Informatics, Computing, and Engineering is one of the world’s largest,
+				broadest, and best technology and information schools.</p>
+			<p>We shape the future through interdisciplinary research and education that make the impossible possible and solve
+				the problems of tomorrow today.</p>
+		</article>
+		
+		<article>
+			<h3>Degrees for evolving jobs</h3>
+			<p>Our programs are broad, ranging from the technical to the societal and often blending the two. A Luddy education
+				prepares students to thrive in today’s jobs and to adapt as technology careers change in the decades ahead.</p>
+			<div class="b-container">
+				<a class="button" href="https://luddy.indiana.edu/academics/undergraduate-programs/index.html">Undergraduate
+					programs</a>
+				<a class="button" href="https://luddy.indiana.edu/academics/grad-programs/index.html">Graduate programs</a>
+				<a class="button" href="https://luddy.indiana.edu/career-services/index.html">Career services</a>
+			</div>
+		</article>
+		
+		<article>
+			<h3>Research that defies boundaries</h3>
+			<section>
+				<img class="challenges-img" src="images/research-bioengineering.lab.jpg" alt="research">
+				<div class="research">
+					<p>No challenge is too big for us. Our faculty, researchers, and students team up to explore the frontiers
+						of what
+						technology and information can do in areas ranging from artificial intelligence to medicine. And they
+						use what
+						they discover to make life better for all of us.</p>
+					<a class="button" href="https://luddy.indiana.edu/research/index.html">Explore our research</a>
+					</div>
+			</section>
+		</article>
+
+					
+		
+		<footer></footer>
+
+
+		<!-- JAVASCRIPT -->
+		<!-- PASTE the JS for your Responsive Side Push Navigation w/ Opacity in the NAV.JS file -->
+		<script src="js/nav.js"></script>
+		
+		<!-- Leaflet: Either ok - download the resources or use the CDN -->
+		
+   		<!-- ALSO OK to put activation script into a LEAFLET.JS or MAIN.JS file in JS folder, then link with script tag  -->
+		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+			integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+			crossorigin="">
+				
+		</script>
+		<script>
+			var mymap = L.map('mapid').setView([39.166592, -86.534889], 13);
+			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+				maxZoom: 18,
+				id: 'mapbox.streets',
+				accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+			}).addTo(mymap);
+		</script>
+		<script>
+			var marker = L.marker([39.166592, -86.534889]).addTo(mymap);
+			marker.bindPopup("<b>Luddy School of</b><br>Informatics, Computing and Engineering").openPopup();
+		</script>
+	</body>
+</html>
