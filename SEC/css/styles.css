@@ -1,0 +1,450 @@
+/* natural box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* no break */
+.nobr {
+    white-space: nowrap;
+}
+
+/* General */
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: rgba(228, 228, 228, 0.8);
+    
+}
+
+/* Nav */
+
+header {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-top: 7px solid #3C3CA5;
+    height: 100px;
+}
+
+.logo img {
+    width: 80px;
+    margin-left: 1.5em;
+}
+
+.logo h1 {
+    display: none;
+}
+
+.list-nav {
+    visibility: hidden;
+}
+
+
+.burger-nav:hover {
+    background-color: rgba(37, 158, 51, .3);
+}
+
+.burger-nav p {
+    font-size: 10px;
+    margin: 0 0 0 1em;
+}
+
+.burger-nav {
+    border: 3px solid #3C3CA5;
+    padding: .5em;
+    position: absolute;
+    right: 1.5em;
+    color: #3C3CA5;
+    font-weight: 700;
+}
+
+.burger-nav:hover {
+    background: #3C3CA5;
+    color: white;
+}
+
+.align-burger {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding: 1em;
+}
+
+#statement {
+    border: 3px solid #3C3CA5;
+    padding: .5em .5em;
+    margin: 1em;
+    max-width: 443px;
+    text-align: center;
+    color: #3C3CA5;
+    font-weight: 700;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #3C3CA5;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 50px;
+}
+
+/* Main */
+
+.exp-banner {
+    object-fit: cover;
+    height: 80%;
+    width: 100%;
+}
+
+.button {
+    text-decoration: none;
+    background: white;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3C3CA5;
+    padding: .5em 1.5em;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    margin-top: 2em;
+    white-space: nowrap;
+    
+}
+
+.intro-msg {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.message-overlay {
+    position: absolute;
+    width: 90%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message-overlay h2 {
+    font-size: 20px;
+    margin: .30em;
+}
+
+.float-msg {
+    position: relative;
+    text-align: center;
+}
+
+.about-us {
+    position: absolute;
+    width: 80%;
+    top: 32%;
+    left: 10%;
+    background: white;
+    border-top: 10px solid #2B6334;
+    padding-bottom: 1em;
+}
+
+.about-us img {
+    margin-top: 2em;
+    width: 50%;
+
+}
+
+.about-us h3 {
+    font-size: 23px;
+    margin: .25em .5em;
+}
+
+.about-us p {
+    font-size: 15px;
+    line-height: .25in;
+    padding: 0 1em;
+    margin: 0;
+}
+
+.white-wall img {
+    width: 100%;
+    height: 80%;
+}
+
+.background-trans-img {
+    background: url('/images/temp-building2.jpg');
+    background-size: cover;
+    min-height: 60%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1050px;
+    min-height: 300px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4.0em 0.5em;
+}
+
+.branding {
+    width: 100%;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 0.5em 0 1.5em;
+}
+
+.button2 {
+    text-decoration: none;
+    background: white;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3C3CA5;
+    padding: .5em 1.5em;
+    white-space: nowrap;
+
+}
+
+.form {
+    position: relative;
+    text-align: center;
+}
+
+form h3{
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+form p {
+    font-size: 15px;
+    padding: 0 1em;
+    margin-top: .25em;
+}
+
+.float-form {
+    position: absolute;
+    width: 80%;
+    height: 700px;
+    bottom: 20%;
+    left: 10%;
+    background: white;
+    border-top: 20px solid #3C3CA5;
+    padding-bottom: 1em;
+}
+
+.user-input {
+    font-size: 15px;
+    height: 5%;
+    width: 80%;
+    margin-bottom: 1em;
+    padding: 1.5em .5em;
+    border: 2px solid rgba(0,0,0, .4);
+}
+
+input:focus {
+    outline: 2px solid #2B6334;
+}
+
+textarea:focus {
+    outline: 2px solid #2B6334;
+}
+
+.message {
+    color: rgba(0,0,0, .6);
+    font-size: 15px;
+    padding: .5em;
+    width: 80%;
+    height: 30%;
+    margin-bottom: 2em;
+    border: 2px solid rgba(0,0,0, .4);
+}
+
+.get-estimate {
+    border: 3px solid #3C3CA5;
+    color:  #3C3CA5;
+    background: white;
+    font-size: 13px;
+    padding: .5em 1.5em;
+    font-weight: 700;
+}
+
+.get-estimate:hover {
+    background: #3C3CA5;
+    color: white;
+}
+
+footer {
+    background: url('/images/white_wall_hash/white_wall_hash.png');
+    background-size: cover;
+    height: 800px;
+}
+
+.bottom-info {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+}
+
+.bottom-info h4{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.bottom-info p {
+    font-size: 9px;
+}
+
+.bottom-info a {
+    text-decoration: none;
+    color: #3C3CA5
+}
+
+.fab {
+    display: block;
+    font-size: 20px;
+    margin: 1em;
+}
+
+
+.fa-copyright {
+    
+    font-size: 9px;
+}
+
+
+
+
+
+
+/* @media only screen and (min-width: 992px) {
+
+    
+    header {
+        display: flex;
+        padding: .5em 2em;
+        justify-content: space-between;
+        background: white;
+        border-top: 5px solid #3C3CA5;
+    }
+
+    .logo img {
+        width: 10.7%;
+        min-width: 80px;
+    }
+
+    .logo h1 {
+        padding-left: .5em;
+    }
+
+    .logo {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+        max-width: 550px;
+    }
+
+    .list-nav ul {
+        list-style: none;
+    }
+
+    .list-nav ul li:hover {
+        border-bottom: 2px solid #3C3CA5;
+    }
+
+    .list-nav {
+        display: flex;
+        position: absolute;
+        right: 2em;
+        top: 3.5%;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .horizontal-nav {
+        display: flex;
+        margin-right: 1em;
+        min-width: 350px;
+    }
+
+    .horizontal-nav li {
+        margin: .5em 1em;
+    }
+
+    .estimate {
+        border: 3px solid #3C3CA5;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: .5em .5em;
+    }
+
+    .estimate:hover {
+        background-color: rgba(37, 158, 51, .3);
+    }
+
+    .estimate p {
+        margin: 0;
+        min-width: 140px;
+        font-weight: 700;
+    }
+} */

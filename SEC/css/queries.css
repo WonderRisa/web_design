@@ -1,0 +1,200 @@
+@media (min-width:375px) and (max-width: 480px) {
+    .logo img {
+        background-color: blueviolet;
+        margin-left: 2.5em;
+    }
+    .burger-nav p {
+        font-size: 20px ;
+        margin: 0 0 0 1em;
+    }
+    
+    .burger-nav {
+        border: 3px solid #3C3CA5;
+        padding: .5em;
+        position: absolute;
+        right: 2.5em;
+    } 
+
+    .button {
+        font-size: 20px;
+        padding: .5em 1.5em;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        margin-top: 2em;
+    }
+
+    .about-us {
+        padding-bottom: 3em;
+    }
+
+    .white-wall img{
+        height: 50%;
+    }
+
+    .background-trans-img {
+        min-height: 70%;
+    }
+
+    .container {
+        padding: 4.0em 0.5em;
+    }
+
+    .button2 {
+        font-size: 20px;
+        padding: .5em 1.5em;
+    
+    }
+
+    .float-form {
+        position: absolute;
+        width: 80%;
+        height: 700px;
+        bottom: 25%;
+        left: 10%;
+        background: white;
+        border-top: 20px solid #3C3CA5;
+        padding-bottom: 1em;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 667px)  { 
+    header {
+        height: 120px
+    }
+    .logo img {
+        width: 100px;
+        background-color: red;
+        margin-left: 2.5em;
+    }
+    .burger-nav p {
+        font-size: 17px;
+    }
+    
+    .burger-nav {
+        padding: .5em 1em;
+        right: 2em;
+    }
+
+    .about-us {
+        padding-bottom: 4em;
+    }
+
+    .about-us p{
+        margin-top: 1em;
+    }
+
+
+}
+
+@media only screen and (min-width: 668px) and (max-width: 736px)  { 
+    header {
+        height: 140px;
+    }
+    
+    .logo img {
+        background-color:green;
+        margin-left: 2.5em;
+        width: 120px;
+    }
+
+    .burger-nav {
+        display: none;
+    }
+
+    .list-nav {
+        visibility: unset;
+        display: flex;
+    }
+
+    .list-nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .list-nav ul li {
+        margin: 0 1em;
+        font-size: 14px;;
+        font-weight: 600;
+    }
+
+    .list-nav ul li:hover {
+        color: #3C3CA5;
+    }
+
+    .estimate {
+        font-size: 14px;
+        font-weight: 700;
+        color: #3C3CA5;
+        border: 3px solid #3C3CA5;
+        padding: 0 1em;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+    }
+
+    .message-overlay h2 {
+        font-size: 35px;
+    }
+
+    .button {
+        padding: .75em 2em
+    }
+
+    .about-us img {
+        width: 150px
+    }
+
+    .about-us {
+        top: 37%;
+        padding-bottom: 3em;
+    }
+
+    .about-us p{
+        margin-top: 1em;
+        padding: 0 2em;
+    }
+
+    .side-by-side {
+        display: flex;
+        justify-content: center;
+    }
+
+    .user-input {
+        font-size: 14px;
+        width: 25%;
+        margin: 2em .5em;
+        padding: 1em 1em
+    }
+
+    .float-form p {
+        margin: 1em;
+    }
+
+    .float-form {
+        height: 500px;
+        bottom: 22%;
+    }
+
+    footer {
+        height: 600px;
+    }
+}
+
+@media only screen and (min-width: 737px) and (max-width: 812px)  { 
+    .logo img {
+        background-color:orange;
+        margin-left: 2.5em;
+    }
+
+}
+
+@media only screen and (min-width: 813px) { 
+    .logo img {
+        background-color:yellow;
+        margin-left: 2.5em;
+    }
+
+}
