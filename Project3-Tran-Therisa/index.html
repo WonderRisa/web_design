@@ -1,0 +1,125 @@
+<!--Therisa Tran
+    Project 3
+    Class #: 12108-->
+
+<!--Only About page and Service page have active links-->
+<!--There is a background it is called so-white. I wanted to keep the clean feeling.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>SPLURGE!</title>
+</head>
+
+<body>
+    <nav class="mainnav">
+        <ul>
+            <li><a href="../index.html">ABOUT</a></li>
+            <li><a href="../services.html">SERVICES</a></li>
+            <li class="logo">SPLURGE<span>MOORE</span> Skincare</li>
+            <li><a href="#">APPOINTMENTS</a></li>
+            <li><a href="#c">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <div class="topnav">
+        <div class="active">SPLURGE<span>MOORE</span> Skincare</div>
+        <div id="myLinks">
+            <a href="../index.html">ABOUT</a>
+            <a href="../services.html">SERVICES</a>
+            <a href="#">APPOINTMENT</a>
+            <a href="#">CONTACT US</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            MENU
+        </a>
+    </div>
+    <main class="disappear">
+        <section class="container hvr-float">
+            <h1 class="sr-only">FACE</h1> <!--had to place a heading to get valid html code-->
+            <!--Photo by Park Street on Unsplash-->
+            <a href="../services.html">
+                <img src="images/park-street-Sg9BGgvE5rk-unsplash.jpg" alt="face">
+                <div class="overlay">
+                    <div class="text">FACE</div>
+                </div>
+            </a>
+        </section>
+        <section class="container hvr-float">
+            <h1 class="sr-only">BODY</h1><!--had to place a heading to get valid html code-->
+            <!--Photo by Toa Heftiba on Unsplash-->
+            <a href="../services.html#wax">
+                <img src="images/toa-heftiba-a9pFSC8dTlo-unsplash.jpg" alt="body">
+                <div class="overlay">
+                    <div class="text">BODY</div>
+                </div>
+            </a>
+        </section>
+    </main>
+    <article class="general">
+        <h1>MISSION</h1>
+        <p>Our mission is to build rewarding client relationships by exceeding your expectations through individualized
+            attention, skin-care education, and customized services.</p>
+    </article>
+    <article class="general">
+        <h2>FACIAL PRODUCTS</h2>
+        <p>Splurge uses the DermAware Bio-Targeted Skin Care line that delivers skin science combined with nature's
+            purest ingredients resulting in radianting skin. Enhanced concentrations with advanced nanotechnology
+            delivery, the results are immediate and unforgettable.</p>
+    </article>
+    <article class="general">
+        <h2>WAX PRODUCTS</h2>
+        <p>At Splurge, our salon only use Nufree Nudesse wax. Nufree Nudesse is completely botanical and safe for the
+            entire body. Nufree is self-preserving antibacterial/antimicrobial so its safe, clean and germ free that has
+            been scientifically tested and uses no animal products.</p>
+    </article>
+    <article class="general">
+        <h2>APPOINTMENT POLICY</h2>
+        <p>Please contact us within 24 hours of your scheduled appointment for any cancellations. You will be charged in
+            full for cancellations with less than 24 hours notice.</p>
+        <a href="#">Click this message to book an appointment today!</a>
+    </article>
+    <footer>
+        <aside>
+            <h3>SPLURGE<span>MOORE</span> Skincare</h3>
+            <ul>
+                <li>Address: 3901 E. Hagan Street, Bloomington , IN 47401</li>
+                <li>Tel: +1 (812)322-9171</li>
+            </ul>
+        </aside>
+        <aside class="adj">
+            <ul>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Appointments</a></li>
+            </ul>
+        </aside>
+
+    </footer>
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
