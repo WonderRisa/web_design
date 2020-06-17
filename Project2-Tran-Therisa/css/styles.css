@@ -1,0 +1,129 @@
+
+/* natural box model */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* UTILITIES */
+
+  /* hides an element on screen, but not from screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  /* no break */
+  .nobr {
+    white-space: nowrap;
+  }
+
+/* BACKGROUND */
+body {
+    background: url("../images/moon.png") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.taeyang {
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0px;
+}
+/* STRUCTURE */
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    color: rgb(255, 255, 255, 0.75);
+}
+
+h1 {
+    font-size: 70px;
+    border-bottom: 2.5px solid gold;
+    font-weight: 400;
+}
+
+h2{ 
+    margin: 10px 0; 
+    position: fixed;
+    left: 600px;
+}
+
+.song {
+    width: 700px;
+    margin: 0 0 0 50px;
+    position: fixed;
+    top: 0px;
+}
+
+
+p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    color: white; 
+    text-shadow:  1px 1px 13px navy,  1px 1px 14px goldenrod;
+}
+
+
+
+.container {
+    width: 550px;
+    margin: 130px 0px 10px 850px;
+    padding: 65px 65px;
+    background-color: rgb(255, 255, 255, 0.10);
+    
+}
+
+
+/* QUOTATION */
+
+p:first-child::before{
+    content: open-quote;
+    font-size: 80px;
+    color: gold;
+    position: relative;
+    top: 30px;
+     left: -20px;
+}
+
+p:last-child::after{
+    content: close-quote;
+    font-size: 80px;
+    color: gold ;
+    position: relative;
+    top: -13px;
+    left: 9px;
+    float: right;
+}
+
+/* SPAN */
+
+.shadow {
+    text-shadow: white 2px -2px 12px, rgb(20, 40 ,210) 1px 1px 9px;
+}
+
+.eyes{
+    font-size: 35px;
+    color:mediumblue;
+    
+}
+
+.nose {
+    font-size: 35px;
+    color: gold;
+    
+}
+
+.lips{
+    font-size: 35px;
+    color: red;
+}
