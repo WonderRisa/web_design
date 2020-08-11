@@ -1,6 +1,6 @@
 @media (min-width:375px) and (max-width: 480px) {
     .logo img {
-        background-color: blueviolet;
+        /* background-color: blueviolet; */
         margin-left: 2.5em;
     }
     .burger-nav p {
@@ -26,6 +26,7 @@
 
     .about-us {
         padding-bottom: 3em;
+        top: 39%;
     }
 
     .white-wall img{
@@ -65,7 +66,7 @@
     }
     .logo img {
         width: 100px;
-        background-color: red;
+        /* background-color: red; */
         margin-left: 2.5em;
     }
     .burger-nav p {
@@ -77,14 +78,23 @@
         right: 2em;
     }
 
+
     .about-us {
         padding-bottom: 4em;
+        top: 37%;
     }
 
     .about-us p{
         margin-top: 1em;
     }
 
+    .about-us img {
+        width: 150px
+    }
+
+    .white-wall img {
+        height: 50%;
+    }
 
 }
 
@@ -94,34 +104,21 @@
     }
     
     .logo img {
-        background-color:green;
+        /* background-color:green; */
         margin-left: 2.5em;
         width: 120px;
     }
 
     .burger-nav {
-        display: none;
+        display: block;
+        padding: .5em 1em;
+        right: 2em;
     }
 
-    .list-nav {
-        visibility: unset;
-        display: flex;
+    .burger-nav p {
+        font-size: 17px;
     }
 
-    .list-nav ul {
-        list-style: none;
-        display: flex;
-    }
-
-    .list-nav ul li {
-        margin: 0 1em;
-        font-size: 14px;;
-        font-weight: 600;
-    }
-
-    .list-nav ul li:hover {
-        color: #3C3CA5;
-    }
 
     .estimate {
         font-size: 14px;
@@ -153,7 +150,7 @@
     }
 
     .about-us p{
-        margin-top: 1em;
+        margin-top: 2em;
         padding: 0 2em;
     }
 
@@ -185,16 +182,83 @@
 
 @media only screen and (min-width: 737px) and (max-width: 812px)  { 
     .logo img {
-        background-color:orange;
+        /* background-color:orange; */
         margin-left: 2.5em;
+    }
+
+    .burger-nav {
+        padding: .5em 1em;
+    }
+
+    .message-overlay h2 {
+        font-size: 45px;
+    }
+
+    .about-us {
+        top: 40%;
+    }
+
+    .about-us img {
+        width: 150px
+    }
+
+    .about-us h3 {
+        font-size: 30px;
+    }
+
+    .about-us p {
+        padding:1em 3em 3em 3em;
+    }
+
+    .container h3 {
+        font-size: 30px;
     }
 
 }
 
 @media only screen and (min-width: 813px) { 
     .logo img {
-        background-color:yellow;
+        /* background-color:yellow; */
         margin-left: 2.5em;
+    }
+
+    .burger-nav {
+        display: none;
+    }
+
+    .list-nav {
+        visibility: visible;
+        position: absolute;
+        right: -.25em;
+    }
+
+    .message-overlay h2 {
+        font-size: 45px;
+    }
+
+    .about-us {
+        top: 42%;
+    }
+
+    .about-us img {
+        width: 150px
+    }
+
+
+    .about-us h3 {
+        font-size: 30px;
+    }
+
+    .about-us p {
+        padding:1em 3em 3em 3em;
+    }
+
+    .container h3 {
+        font-size: 40px;
+    }
+
+    form {
+        display: inline-block;
     }
 
 }
