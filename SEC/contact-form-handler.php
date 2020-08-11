@@ -1,49 +1,30 @@
 <?php
-$errors = '';
-$myemail = 'diatramy@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['fname'])  || 
-    empty($_POST['lname'])  || 
-   empty($_POST['email']) || 
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
+
+if(isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $mailFrom = $_POST['mail'];
+    $message = $_POST['message'];
+
+    // if (empty($name) || empty($subject) || empty($mailFrom) || empty($message)) {
+    //     header("Location: index.php?mailsend=empty");
+    // }
+    // else {
+    //     if (!filter_var($mailFrom, FILTER_VALIDATE_EMAIL)) {
+    //         header("Location: index.php?mailsend=invalidemail");
+    //     }
+    //     else {
+    //         echo "E-mail Valid";
+    //     }
+    // }
+
+    $mailTo = "thetran@iu.edu";
+    $headers = "From: ".$mailFrom;
+    $txt = "You have recieved an e-mail from ".$name.".\n\n".$message;
+
+    mail($mailTo, $subject, $txt, $headers);
+    header("Location: index.php?mailsend");
 }
-
-$fname = $_POST['fname']; 
-$lname = $_POST['lname']; 
-$email_address = $_POST['email']; 
-$message = $_POST['message']; 
-
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
+else {
+    header("Location: index.php?mailsend=error");
 }
-
-if( empty($errors))
-
-{
-
-$to = $myemail;
-
-$email_subject = "Contact form submission: $fname + $lname";
-
-$email_body = "You have received a new message. ".
-
-" Here are the details:\n Name: $fname \n ".
-
-"Email: $email_address\n Message \n $message";
-
-$headers = "From: $myemail\n";
-
-$headers .= "Reply-To: $email_address";
-
-mail($to,$email_subject,$email_body,$headers);
-
-//redirect to the 'thank you' page
-
-header('Location: thankyou.html');
-
-}
-?>
