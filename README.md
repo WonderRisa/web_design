@@ -16,9 +16,10 @@ Images are not as clear, because they were obtained from the google images. I wo
 
 
 ### SEC (Spotless Exterior CLeaning)
-This is a small project to aid a friend starting up his exterior cleaning company. This is still a work in progress with no deadline.
+This is a small project to aid starting up an exterior cleaning company. This is still a work in progress with no deadline.
 Plans:
   - add static page for services
   - fix responsive positioning (mobile->web)
   - test contact form
+  - finad SMTP addon to Heroku
 
